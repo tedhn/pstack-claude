@@ -4,7 +4,11 @@ A port of [poteto's pstack](https://github.com/cursor/plugins/tree/main/pstack) 
 
 ## Install
 
-This directory is a Claude Code plugin in the skills directory. Claude Code loads it automatically as `pstack@skills-dir` on the next session, or run `/reload-plugins` now.
+Clone into the Claude Code skills directory. Claude Code loads it automatically as `pstack@skills-dir` on the next session, or run `/reload-plugins` now.
+
+```bash
+git clone https://github.com/tedhn/pstack-claude.git ~/.claude/skills/pstack
+```
 
 ```bash
 claude plugin validate ~/.claude/skills/pstack
