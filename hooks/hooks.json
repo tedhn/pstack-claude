@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/hooks/session-start.js\"",
+            "timeout": 5,
+            "statusMessage": "pstack: restoring session state"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/hooks/poteto-mode-tracker.js\"",
+            "timeout": 5,
+            "statusMessage": "pstack: tracking poteto-mode"
+          }
+        ]
+      }
+    ]
+  }
+}
